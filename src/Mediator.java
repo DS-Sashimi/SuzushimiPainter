@@ -1,8 +1,10 @@
 import java.awt.*;
 import java.io.*;
-import java.util.*;
+import java.util.Enumeration;
+import java.util.Vector;
 
 public class Mediator {
+    
     Vector<MyDrawing> drawings;
     MyCanvas canvas;
     Vector<MyDrawing> selectedDrawings;
@@ -191,7 +193,7 @@ public class Mediator {
             MyDrawing clone;
             for (int i = 0; i < buffers.size(); i++) {
                 MyDrawing d = buffers.get(i);
-                clone = (MyDrawing) d.clone();
+                clone = d.clone();
                 clone.move(rightX - copyX, rightY - copyY);
                 // addDrawing(clone); の代わりに次の2行を使う．
                 drawings.add(clone);

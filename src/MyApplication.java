@@ -1,9 +1,9 @@
+import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-import javax.swing.*;
-
 public class MyApplication extends JFrame {
+    
     StateManager stateManager;
     MyCanvas canvas;
     
@@ -22,10 +22,7 @@ public class MyApplication extends JFrame {
         
         Container contentPane = getContentPane();
         
-        /*
-         * メニューを構成する
-         */
-        
+        // メニューを構成する
         JPanel jp = new JPanel();
         jp.setLayout(new BoxLayout(jp, BoxLayout.Y_AXIS));
         
@@ -259,10 +256,7 @@ public class MyApplication extends JFrame {
         
     }
     
-    /*
-     * メインメソッド
-     */
-    
+    /** メインメソッド */
     public static void main(String[] args) {
         MyApplication app = new MyApplication();
         //app.setSize(400, 300);
@@ -270,11 +264,9 @@ public class MyApplication extends JFrame {
         app.setVisible(true);
     }
     
-    /*
-     * メニューのためのメソッド
-     */
+    // メニューのためのメソッド
     
-    // メニュー（右クリックで表示されるポップアップメニュー）に項目を追加するメソッド
+    /** メニュー（右クリックで表示されるポップアップメニュー）に項目を追加するメソッド */
     private void addPopupMenuItem(String name, ActionListener actionListener) {
         JMenuItem item = new JMenuItem(name);
         item.addActionListener(actionListener);
@@ -283,11 +275,9 @@ public class MyApplication extends JFrame {
     
 }
 
-/*
- * メニューのアイテム
- */
-
+/** メニューのアイテム */
 class LineColorMenuItem {
+    
     StateManager stateManager;
     Color lineColor;
     String label;
@@ -308,6 +298,7 @@ class LineColorMenuItem {
 }
 
 class FillColorMenuItem {
+    
     StateManager stateManager;
     Color fillColor;
     String label;
@@ -328,6 +319,7 @@ class FillColorMenuItem {
 }
 
 class LineWidthMenuItem {
+    
     StateManager stateManager;
     int lineWidth;
     String label;
@@ -348,11 +340,9 @@ class LineWidthMenuItem {
     
 }
 
-/*
- * リスナ
- */
-
+/** リスナ */
 class DashCheckListener implements ItemListener {
+    
     StateManager stateManager;
     
     public DashCheckListener(StateManager stateManager) {
@@ -367,6 +357,7 @@ class DashCheckListener implements ItemListener {
 }
 
 class ShadowCheckListener implements ItemListener {
+    
     StateManager stateManager;
     
     public ShadowCheckListener(StateManager stateManager) {
@@ -381,6 +372,7 @@ class ShadowCheckListener implements ItemListener {
 }
 
 class LineColorActionListener implements ActionListener {
+    
     StateManager stateManager;
     
     public LineColorActionListener(StateManager stateManager) {
@@ -389,10 +381,6 @@ class LineColorActionListener implements ActionListener {
     
     @Override
     public void actionPerformed(ActionEvent e) {
-        // もともとこうでした
-        // JComboBox<LineColorMenuItem> cb = (JComboBox<LineColorMenuItem>) e.getSource();
-        // ((LineColorMenuItem) cb.getSelectedItem()).changeLineColor();
-        
         JComboBox<LineColorMenuItem> cb = (JComboBox<LineColorMenuItem>) e.getSource();
         LineColorMenuItem selectedItem = (LineColorMenuItem) cb.getSelectedItem();
         if (selectedItem.label == "Other Colors") {
@@ -409,6 +397,7 @@ class LineColorActionListener implements ActionListener {
 }
 
 class FillColorActionListener implements ActionListener {
+    
     StateManager stateManager;
     
     public FillColorActionListener(StateManager stateManager) {

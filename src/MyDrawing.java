@@ -2,6 +2,7 @@ import java.awt.*;
 import java.io.Serializable;
 
 public class MyDrawing implements Cloneable, Serializable {
+    
     private int x, y, w, h; // x 座標，y 座標，幅，高さ
     private Color lineColor, fillColor; // 線の色，塗り色
     private int lineWidth; // 線の太さ
@@ -12,7 +13,7 @@ public class MyDrawing implements Cloneable, Serializable {
     private boolean isSelected; // 選択されているかどうか
     private Shape region; // 包含判定用の範囲
     private final int SIZE = 7; // 選択表示矩形に付く四角形の大きさ
-    final float[] dash = { 3, 3 }; // 選択図形の枠の破線のパターン
+    final float[] dash = {3, 3}; // 選択図形の枠の破線のパターン
     
     /*
      * コンストラクタ

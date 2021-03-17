@@ -1,6 +1,6 @@
-import java.awt.event.*;
-
-import javax.swing.JButton;
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class TriangleButton extends JButton {
     
@@ -15,6 +15,7 @@ public class TriangleButton extends JButton {
     }
     
     class RectListener implements ActionListener {
+        
         public void actionPerformed(ActionEvent E) {
             stateManager.setState(new TriangleState(stateManager), State.TRIANGLE_STATE);
         }
@@ -22,6 +23,7 @@ public class TriangleButton extends JButton {
 }
 
 class TriangleState implements State {
+    
     StateManager stateManager;
     MyTriangle triangle;
     

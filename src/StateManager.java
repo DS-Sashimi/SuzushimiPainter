@@ -1,8 +1,9 @@
-import java.awt.Color;
+import java.awt.*;
 
 public class StateManager {
+    
     MyCanvas canvas;
-    State state; // = new SelectState(this); とかにすれば，下の if (state != null) が不要になるのかな．
+    State state;
     int stateNumber;
     // これから描画する図形の属性
     boolean isDashed = false;

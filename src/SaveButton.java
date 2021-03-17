@@ -1,9 +1,10 @@
-import java.awt.event.*;
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
 
-import javax.swing.*;
-
 public class SaveButton extends JButton {
+    
     StateManager stateManager;
     
     public SaveButton(StateManager stateManager) {

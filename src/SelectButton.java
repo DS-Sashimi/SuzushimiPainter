@@ -1,9 +1,10 @@
-import java.awt.Rectangle;
-import java.awt.event.*;
-
-import javax.swing.JButton;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class SelectButton extends JButton {
+    
     StateManager stateManager;
     
     public SelectButton(StateManager stateManager) {
@@ -15,6 +16,7 @@ public class SelectButton extends JButton {
     }
     
     class SelectListener implements ActionListener {
+        
         public void actionPerformed(ActionEvent E) {
             stateManager.setState(new SelectState(stateManager), State.SELECT_STATE);
         }
@@ -23,6 +25,7 @@ public class SelectButton extends JButton {
 }
 
 class SelectState implements State {
+    
     StateManager stateManager;
     int clickX, clickY; // ドラッグの際に差分を求めるために保っておく座標
     MySelectRegionRect selectRegionRect;

@@ -1,6 +1,7 @@
 import java.awt.*;
 
 public class SpoitFillColorState implements State {
+    
     StateManager stateManager;
     Robot robot;
     Color fillColor;

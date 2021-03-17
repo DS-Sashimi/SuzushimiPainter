@@ -1,9 +1,11 @@
-import java.awt.event.*;
-import java.awt.print.*;
-
-import javax.swing.JButton;
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.print.PrinterException;
+import java.awt.print.PrinterJob;
 
 public class PrintButton extends JButton {
+    
     StateManager stateManager;
     
     public PrintButton(StateManager stateManager) {

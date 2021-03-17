@@ -1,11 +1,14 @@
+import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
-import java.awt.print.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionListener;
+import java.awt.print.PageFormat;
+import java.awt.print.Printable;
+import java.awt.print.PrinterException;
 import java.util.Enumeration;
 
-import javax.swing.JPanel;
-
 public class MyCanvas extends JPanel implements Printable {
+    
     Mediator mediator;
     
     public MyCanvas() {
@@ -46,6 +49,7 @@ public class MyCanvas extends JPanel implements Printable {
 }
 
 class CanvasMouseMotionListener implements MouseMotionListener {
+    
     Mediator mediator;
     MyDrawing d;
     

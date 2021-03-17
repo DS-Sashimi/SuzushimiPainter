@@ -1,6 +1,7 @@
 import java.awt.*;
 
 public class SpoitLineColorState implements State {
+    
     StateManager stateManager;
     Robot robot;
     Color lineColor;

@@ -1,7 +1,7 @@
-import java.awt.event.*;
-import java.io.File;
-
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
 
 public class LoadButton extends JButton {
     
@@ -14,6 +14,7 @@ public class LoadButton extends JButton {
     }
     
     class LoadListener implements ActionListener {
+        
         @Override
         public void actionPerformed(ActionEvent E) {
             JFileChooser fc = new JFileChooser();

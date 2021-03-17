@@ -42,11 +42,11 @@ public class MyTriangle extends MyDrawing {
             h *= -1;
         }
         
-        int xPoints[] = { x, x + w, x + (int) (w / 2.0) };
-        int yPoints[] = { y + h, y + h, y };
+        int[] xPoints = {x, x + w, x + (int) (w / 2.0)};
+        int[] yPoints = {y + h, y + h, y};
         
-        int xPoints_shadow[] = { x + 5, x + w + 5, x + (int) (w / 2.0) + 5 };
-        int yPoints_shadow[] = { y + h + 5, y + h + 5, y + 5 };
+        int[] xPoints_shadow = {x + 5, x + w + 5, x + (int) (w / 2.0) + 5};
+        int[] yPoints_shadow = {y + h + 5, y + h + 5, y + 5};
         
         Graphics2D g2 = (Graphics2D) g;
         

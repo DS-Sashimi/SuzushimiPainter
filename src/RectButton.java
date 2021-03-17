@@ -1,8 +1,9 @@
-import java.awt.event.*;
-
-import javax.swing.JButton;
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class RectButton extends JButton {
+    
     StateManager stateManager;
     
     public RectButton(StateManager stateManager) {
@@ -12,6 +13,7 @@ public class RectButton extends JButton {
     }
     
     class RectListener implements ActionListener {
+        
         @Override
         public void actionPerformed(ActionEvent e) {
             stateManager.setState(new RectState(stateManager), State.RECTANGLE_STATE);
@@ -20,6 +22,7 @@ public class RectButton extends JButton {
 }
 
 class RectState implements State {
+    
     StateManager stateManager;
     MyRectangle rect;
     

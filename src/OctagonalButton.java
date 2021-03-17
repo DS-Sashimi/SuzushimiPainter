@@ -1,6 +1,6 @@
-import java.awt.event.*;
-
-import javax.swing.JButton;
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class OctagonalButton extends JButton {
     
@@ -15,6 +15,7 @@ public class OctagonalButton extends JButton {
     }
     
     class OctagonalListener implements ActionListener {
+        
         @Override
         public void actionPerformed(ActionEvent E) {
             stateManager.setState(new OctagonalState(stateManager), State.OCTAGONAL_STATE);
@@ -23,6 +24,7 @@ public class OctagonalButton extends JButton {
 }
 
 class OctagonalState implements State {
+    
     StateManager stateManager;
     MyOctagonal octagon;
     

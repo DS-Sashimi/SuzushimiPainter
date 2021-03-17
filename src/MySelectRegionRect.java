@@ -1,6 +1,7 @@
 import java.awt.*;
 
 public class MySelectRegionRect extends MyDrawing {
+    
     BasicStroke selectLineStroke = new BasicStroke(1);
     Color selectLineColor = new Color(30, 114, 255, 200);
     Color selectFillColor = new Color(30, 114, 255, 60);

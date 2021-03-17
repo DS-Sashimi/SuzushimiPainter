@@ -1,8 +1,9 @@
-import java.awt.event.*;
-
-import javax.swing.JButton;
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class OvalButton extends JButton {
+    
     StateManager stateManager;
     
     public OvalButton(StateManager stateManager) {
@@ -14,6 +15,7 @@ public class OvalButton extends JButton {
     }
     
     class OvalListener implements ActionListener {
+        
         public void actionPerformed(ActionEvent E) {
             stateManager.setState(new OvalState(stateManager), State.OVAL_STATE);
         }
@@ -22,6 +24,7 @@ public class OvalButton extends JButton {
 }
 
 class OvalState implements State {
+    
     StateManager stateManager;
     MyOval oval;
     

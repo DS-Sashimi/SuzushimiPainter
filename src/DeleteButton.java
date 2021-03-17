@@ -1,6 +1,6 @@
-import java.awt.event.*;
-
-import javax.swing.JButton;
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class DeleteButton extends JButton {
     
@@ -15,6 +15,7 @@ public class DeleteButton extends JButton {
     }
     
     class DeleteListener implements ActionListener {
+        
         public void actionPerformed(ActionEvent E) {
             stateManager.canvas.getMediator().remove();
         }
